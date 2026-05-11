@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Vicco Rizky Alfadli</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#eef3ff;
+      color:#1b1b1b;
+      overflow-x:hidden;
+    }
+
+    .container{
+      width:100%;
+      max-width:1400px;
+      margin:auto;
+      padding:40px;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+      min-height:100vh;
+    }
+
+    .hero-text h4{
+      color:#0d47a1;
+      font-size:18px;
+      letter-spacing:2px;
+      margin-bottom:10px;
+    }
+
+    .hero-text h1{
+      font-size:75px;
+      line-height:1;
+      color:#082567;
+      font-weight:700;
+    }
+
+    .hero-text h2{
+      margin-top:20px;
+      color:#333;
+      font-size:24px;
+      font-weight:500;
+    }
+
+    .hero-text p{
+      margin-top:25px;
+      color:#555;
+      line-height:1.8;
+      max-width:550px;
+    }
+
+    .btn-group{
+      margin-top:35px;
+      display:flex;
+      gap:20px;
+    }
+
+    .btn{
+      padding:14px 30px;
+      border:none;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:600;
+      transition:0.3s;
+      text-decoration:none;
+    }
+
+    .btn-primary{
+      background:#0d47a1;
+      color:white;
+    }
+
+    .btn-primary:hover{
+      background:#08306b;
+    }
+
+    .btn-outline{
+      border:2px solid #0d47a1;
+      color:#0d47a1;
+      background:transparent;
+    }
+
+    .btn-outline:hover{
+      background:#0d47a1;
+      color:white;
+    }
+
+    .hero-image{
+      position:relative;
+      display:flex;
+      justify-content:center;
+    }
+
+    .hero-image::before{
+      content:'';
+      position:absolute;
+      width:450px;
+      height:450px;
+      background:linear-gradient(135deg,#0d47a1,#7da9ff);
+      border-radius:50%;
+      z-index:1;
+      filter:blur(10px);
+      opacity:0.25;
+    }
+
+    .hero-image img{
+      width:420px;
+      position:relative;
+      z-index:2;
+      border-radius:30px;
+      box-shadow:0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .section{
+      margin-top:100px;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      color:#082567;
+      margin-bottom:10px;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+    .skills{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .skill-card{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.06);
+      transition:0.3s;
+    }
+
+    .skill-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .skill-card h3{
+      color:#0d47a1;
+      margin-bottom:15px;
+    }
+
+    .experience{
+      display:grid;
+      gap:30px;
+    }
+
+    .exp-card{
+      background:white;
+      padding:35px;
+      border-radius:20px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.06);
+    }
+
+    .exp-card h3{
+      color:#082567;
+      margin-bottom:10px;
+    }
+
+    .exp-card span{
+      color:#0d47a1;
+      font-weight:600;
+    }
+
+    .contact{
+      background:#082567;
+      padding:60px;
+      border-radius:30px;
+      color:white;
+      text-align:center;
+      margin-top:100px;
+    }
+
+    .contact h2{
+      font-size:40px;
+      margin-bottom:20px;
+    }
+
+    .contact p{
+      margin-bottom:30px;
+      color:#d6e3ff;
+    }
+
+    .contact-info{
+      display:flex;
+      justify-content:center;
+      gap:40px;
+      flex-wrap:wrap;
+    }
+
+    .contact-box{
+      background:rgba(255,255,255,0.08);
+      padding:20px 30px;
+      border-radius:15px;
+      backdrop-filter:blur(10px);
+    }
+
+    footer{
+      text-align:center;
+      padding:40px 0;
+      color:#666;
+    }
+
+    @media(max-width:900px){
+
+      .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:55px;
+      }
+
+      .hero-text p{
+        margin:auto;
+        margin-top:25px;
+      }
+
+      .btn-group{
+        justify-content:center;
+      }
+
+      .hero-image img{
+        width:320px;
+      }
+
+      .hero-image::before{
+        width:320px;
+        height:320px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="hero-text">
+        <h4>IT SUPPORT</h4>
+
+        <h1>VICCO<br>RIZKY ALFADLI</h1>
+
+        <h2>Problem Solver | Tech Enthusiast</h2>
+
+        <p>
+          Seorang teknisi IT yang berpengalaman dalam hardware,
+          software, networking dan troubleshooting. Memiliki
+          pengalaman sebagai IT Support serta Teknisi Jaringan
+          FTTH dengan semangat berkembang di dunia teknologi.
+        </p>
+
+        <div class="btn-group">
+          <a href="#" class="btn btn-primary">Hubungi Saya</a>
+          <a href="#" class="btn btn-outline">Download CV</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <!-- GANTI FOTO -->
+        <img src="pas photo.png" alt="Vicco">
+      </div>
+
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section">
+
+      <div class="section-title">
+        <h2>Keahlian</h2>
+        <p>Kemampuan utama yang saya kuasai</p>
+      </div>
+
+      <div class="skills">
+
+        <div class="skill-card">
+          <h3>Hardware</h3>
+          <p>Troubleshooting komputer, maintenance, upgrade perangkat dan instalasi hardware.</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Networking</h3>
+          <p>Konfigurasi jaringan, FTTH, Mikrotik basic, maintenance jaringan dan troubleshooting.</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Software</h3>
+          <p>Instalasi Windows, Office, software perusahaan dan maintenance sistem.</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>IT Support</h3>
+          <p>Membantu kebutuhan IT perusahaan dan memberikan solusi teknis secara cepat.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section">
+
+      <div class="section-title">
+        <h2>Pengalaman Kerja</h2>
+        <p>Perjalanan karir dan pengalaman profesional</p>
+      </div>
+
+      <div class="experience">
+
+        <div class="exp-card">
+          <h3>PT WIKA BETON Tbk</h3>
+          <span>IT Support & Admin | 2022 - 2025</span>
+
+          <p style="margin-top:15px; line-height:1.8;">
+            Menangani troubleshooting komputer, maintenance perangkat,
+            administrasi IT, monitoring jaringan dan membantu operasional perusahaan.
+          </p>
+        </div>
+
+        <div class="exp-card">
+          <h3>PT ARAZ INTI LINE (ZITLINE)</h3>
+          <span>Teknisi Jaringan | 2022</span>
+
+          <p style="margin-top:15px; line-height:1.8;">
+            Melakukan instalasi FTTH, maintenance jaringan internet,
+            serta troubleshooting jaringan pelanggan.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+
+      <h2>Kontak Saya</h2>
+
+      <p>
+        Siap bekerja sama dan berkembang bersama dalam dunia teknologi.
+      </p>
+
+      <div class="contact-info">
+
+        <div class="contact-box">
+          📞 0887437697025
+        </div>
+
+        <div class="contact-box">
+          📧riskyvicco270@gmail.com
+        </div>
+
+        <div class="contact-box"> 
+          📍 Lampung, Indonesia
+        </div>
+
+      </div>
+
+    </section>
+
+    <footer>
+      © 2026 Vicco Rizky Alfadli - Portfolio Website
+    </footer>
+
+  </div>
+
+</body>
+</html>
+
+</body>
+</html>
